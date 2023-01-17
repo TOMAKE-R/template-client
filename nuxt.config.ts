@@ -13,7 +13,12 @@ export default defineNuxtConfig({
     },
   },
   srcDir: 'src/',
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxtjs/apollo'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@nuxtjs/apollo',
+    '@nuxtjs/google-fonts',
+  ],
   typescript: {
     shim: false,
   },
@@ -27,5 +32,12 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
     configPath: 'tailwind.config.js',
+  },
+  googleFonts: {
+    families: {
+      'Source Code Pro': {
+        wght: [400],
+      },
+    },
   },
 });

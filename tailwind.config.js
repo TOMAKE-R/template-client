@@ -2,7 +2,11 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ['"Source Code Pro"', 'monospace'],
+      },
+    },
   },
   plugins: [],
 };
