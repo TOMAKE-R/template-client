@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'TOMAKE Template',
+      title: 'TOMAKE Template Client',
       link: [
         {
           rel: 'icon',
@@ -31,10 +31,7 @@ export default defineNuxtConfig({
     '@nuxtjs/apollo',
     '@nuxtjs/google-fonts',
   ],
-  css: ['~/assets/css/main.css', 'vuetify/lib/styles/main.sass'],
-  build: {
-    transpile: ['vuetify'],
-  },
+  css: ['~/assets/css/main.css'],
   typescript: {
     shim: false,
   },
