@@ -24,6 +24,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  extends: ['@patrik_hajek/reusables'],
   srcDir: 'src/',
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-headlessui'],
   css: ['~/assets/css/main.css'],
