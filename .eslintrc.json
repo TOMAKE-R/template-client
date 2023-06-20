@@ -7,13 +7,13 @@
   },
   "extends": [
     "eslint:recommended",
-    "prettier",
     "@nuxtjs/eslint-config-typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:vue/vue3-recommended",
     "plugin:nuxt/recommended",
-    "plugin:tailwindcss/recommended"
+    "plugin:tailwindcss/recommended",
+    "prettier"
   ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
@@ -21,14 +21,8 @@
     "sourceType": "module",
     "parser": "@typescript-eslint/parser"
   },
-  "plugins": ["vue", "@typescript-eslint", "prettier", "tailwindcss", "nuxt"],
+  "plugins": ["vue", "@typescript-eslint", "tailwindcss", "nuxt"],
   "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ],
     "vue/multi-word-component-names": "off",
     "vue/html-self-closing": "off",
     "vue/singleline-html-element-content-newline": "off"
