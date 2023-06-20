@@ -25,32 +25,21 @@ export default defineNuxtConfig({
     },
   },
   srcDir: 'src/',
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@pinia/nuxt',
-    '@nuxtjs/apollo',
-    '@nuxtjs/google-fonts',
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-headlessui'],
   css: ['~/assets/css/main.css'],
   typescript: {
     shim: false,
-  },
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: 'https://localhost:8080/graphql',
-      },
-    },
   },
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
     configPath: 'tailwind.config.js',
   },
-  googleFonts: {
-    families: {
-      'Source Code Pro': {
-        wght: [400],
-      },
+  build: {
+    transpile: ['trpc-nuxt'],
+  },
+  runtimeConfig: {
+    public: {
+      NUXT_PUBLIC_TRPC_ENDPOINT: process.env.NUXT_PUBLIC_TRPC_ENDPOINT,
     },
   },
 });
