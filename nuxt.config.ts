@@ -24,9 +24,14 @@ export default defineNuxtConfig({
       ],
     },
   },
-  extends: ['@patrik_hajek/reusables'],
+  // extends: ['@patrik_hajek/reusables'],
   srcDir: 'src/',
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-headlessui'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    'nuxt-headlessui',
+    '@vueuse/nuxt',
+  ],
   css: ['~/assets/css/main.css'],
   typescript: {
     shim: false,
