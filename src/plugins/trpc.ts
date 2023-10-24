@@ -5,7 +5,7 @@ export default defineNuxtPlugin((ctx) => {
   const client = createTRPCNuxtClient<AppRouter>({
     links: [
       httpBatchLink({
-        url: useRuntimeConfig().public.API_TRPC,
+        url: useRuntimeConfig().public.NUXT_PUBLIC_TRPC_ENDPOINT,
         fetch(url, options) {
           return fetch(url, {
             ...options,
